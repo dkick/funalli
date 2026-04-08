@@ -4,7 +4,6 @@
    [clojure.test :as t]
    [com.github.dkick.funalli.flat.spock :as spock]
    [com.github.dkick.funalli.util.logic :as lu]
-   [encaje.core :refer [-- fx]]
    [malli.util :as mu]))
 
 (def Name
@@ -58,12 +57,12 @@
   (t/testing "lvar members"
     (let [q nil
           [x-name & x-rest]
-          (-- (l/run 3 [q]
+          (l/run 3 [q]
                 (name!? q)
                 (l/conde
                  [(lu/member1!? [:first "Damien"] q)]
                  [(lu/member1!? [:first 13] q)])
-                (name!? q)))]
+                (name!? q))]
       (t/is (nil? x-rest))
       ;; ToDo: This would be a perfect place for core.match
       (let [[[k0 v0] [k1 v1] [k2 v2]] x-name]
@@ -73,30 +72,30 @@
   (t/testing "literal members"
     (let [q nil
           [x & y]
-          (-- (l/run 100 [q]
-                (fx name!?
-                    {:first "Damien", :middle "Robert", :last "Kick"} q)
-                (name!? q)))]
+          (l/run 100 [q]
+                (name!?
+                 {:first "Damien", :middle "Robert", :last "Kick"} q)
+                (name!? q))]
       (t/is (nil? y))
       (t/is (= x (fml "Damien" "Robert" "Kick")))))
   (t/testing "literal nonmembers"
     (let [q nil
           [& x]
-          (-- (l/run 1 [q]
+          (l/run 1 [q]
                 (let [q' {:nickname "D'amy"}]
                   (name!? q' q))
-                (name!? q)))]
+                (name!? q))]
       (t/is (nil? x))))
   (t/testing "validate invalidate"
     (let [q nil
           [x y & z]
-          (-- (l/run 3 [q]
+          (l/run 3 [q]
                 (l/conde
                  [(l/== q (fml "Damien" "Robert" "Kick"))]
                  [(l/== q (fml "Damien" nil "Kick"))]
                  [(l/== q [[:first "Robert"] [:last "Downey"]])]
                  [(l/== q [[:nickname "D'amy"]])])
-                (name!? q)))]
+                (name!? q))]
       (t/is (nil? z))
       (t/is (= x (fml "Damien" "Robert" "Kick")))
       (t/is (= y (fml "Damien" nil "Kick"))))))
