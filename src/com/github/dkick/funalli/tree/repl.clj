@@ -1,4 +1,4 @@
-(ns com.github.dkick.mallikanren.tree.repl
+(ns com.github.dkick.funalli.tree.repl
   (:require
    [malli.generator :as mg]))
 

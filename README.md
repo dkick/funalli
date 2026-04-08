@@ -1,9 +1,8 @@
-# mallikanren
+# funalli
 
 A Clojure library designed to combine Malli and core.logic; i.e. use
-Malli transform to generate core.logic relations for the Malli spec. I
-lost a git repo for this so I'm starting over from scratch, from
-memory. Ugh.
+Malli transform to generate core.logic relations for the Malli spec.
+(Formerly "mallikanren".)
 
 ## Usage
 

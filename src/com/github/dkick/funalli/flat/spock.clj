@@ -1,4 +1,4 @@
-(ns com.github.dkick.mallikanren.flat.spock
+(ns com.github.dkick.funalli.flat.spock
   (:refer-clojure :rename {name clj-name})
   (:require
    [clojure.core.logic :as l]

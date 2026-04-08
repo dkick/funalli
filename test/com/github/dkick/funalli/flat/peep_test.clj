@@ -1,9 +1,9 @@
-(ns com.github.dkick.mallikanren.flat.peep-test
+(ns com.github.dkick.funalli.flat.peep-test
   (:require
    [clojure.core.logic :as l]
    [clojure.test :as t]
-   [com.github.dkick.mallikanren.flat.spock :as spock]
-   [com.github.dkick.mallikanren.util.logic :as lu]
+   [com.github.dkick.funalli.flat.spock :as spock]
+   [com.github.dkick.funalli.util.logic :as lu]
    [encaje.core :refer [-- fx]]
    [malli.util :as mu]))
 

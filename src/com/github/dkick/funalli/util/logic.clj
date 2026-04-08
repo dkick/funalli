@@ -1,4 +1,4 @@
-(ns com.github.dkick.mallikanren.util.logic
+(ns com.github.dkick.funalli.util.logic
   (:require
    [clojure.core.logic :as l]))
 

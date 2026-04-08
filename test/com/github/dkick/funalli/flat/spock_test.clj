@@ -1,8 +1,8 @@
-(ns com.github.dkick.mallikanren.flat.spock-test
+(ns com.github.dkick.funalli.flat.spock-test
   (:require
    [clojure.core.logic :as l]
    [clojure.test :as t]
-   [com.github.dkick.mallikanren.flat.spock :as spock]))
+   [com.github.dkick.funalli.flat.spock :as spock]))
 
 (t/deftest basic-col!?-test
   (t/testing "int is int"

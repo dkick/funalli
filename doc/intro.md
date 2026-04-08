@@ -1,3 +1,3 @@
-# Introduction to mallikanren
+# Introduction to funalli
 
 TODO: write [great documentation](http://jacobian.org/writing/what-to-write/)

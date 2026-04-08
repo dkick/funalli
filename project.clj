@@ -1,6 +1,6 @@
-(defproject mallikanren "0.1.0-SNAPSHOT"
-  :description "FIXME: write description"
-  :url "http://example.com/FIXME"
+(defproject funalli "0.1.0-SNAPSHOT"
+  :description "Malli schemas to core.logic relations"
+  :url "https://github.com/dkick/funalli"
   :license {:name "EPL-2.0 OR GPL-2.0-or-later WITH Classpath-exception-2.0"
             :url "https://www.eclipse.org/legal/epl-2.0/"}
   :dependencies [[clj-http "3.12.3"]
@@ -8,4 +8,4 @@
                  [org.clojars.dkick/encaje "0.1.0"]
                  [org.clojure/clojure "1.11.1"]
                  [org.clojure/core.logic "1.0.1"]]
-  :repl-options {:init-ns com.github.dkick.mallikanren.repl})
+  :repl-options {:init-ns com.github.dkick.funalli.repl})
